@@ -1,0 +1,41 @@
+  <%= form_tag({:action => 'contact_us', :controller => "home"}, :remote => true) do %>
+    <form class="form-horizontal">
+      <div class="control-group">
+        <%= text_field_tag :name, params[:name], :placeholder=>"Your Name", :id => "name" %>
+        <% if params[:name_error] %>
+          <span style="color:red; font-size: 11px;"><%= params[:name_error] %></span>
+        <% end %>
+      </div>
+      <div class="control-group">
+        <%= email_field_tag :email, params[:email], :placeholder=>"Email", :id => "email" %>
+        <% if params[:email_error] %>
+          <span style="color:red; font-size: 11px;"><%= params[:email_error] %></span>
+        <% end %>
+      </div>
+      <div class="control-group">
+        <%= text_field_tag :subject, params[:subject], :placeholder=>"subject", :id => "subject" %>
+        <% if params[:subject_error] %>
+          <span style="color:red; font-size: 11px;"><%= params[:subject_error] %></span>
+        <% end %>
+      </div>
+
+      <div class="control-group">
+        <%= text_area_tag :message, params[:message], :placeholder=>"Message" %>
+        <% if params[:message_error] %>
+          <span style="color:red; font-size: 11px;"><%= params[:message_error] %></span>
+        <% end %>
+      </div>
+      <div class="control-group">
+        <%= show_simple_captcha %>
+         <% if params[:captcha_error] %>
+          <span style="color:red; font-size: 11px;"><%= params[:captcha_error] %></span>
+        <% end %>
+      </div>
+      <div class="control-group text-center">
+        <button type="submit" class="btn-send">SEND</button>
+      </div>
+
+
+    </form>
+  <% end %>
+</div>

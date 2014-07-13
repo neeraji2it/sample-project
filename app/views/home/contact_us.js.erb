@@ -1,0 +1,5 @@
+<% if @status %>
+  window.location.reload(true);
+<% else %>
+  $("#contact_form").html("<%= escape_javascript(render :partial => "contact_form") %>")
+<% end %>

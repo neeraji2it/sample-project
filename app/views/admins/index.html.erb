@@ -1,0 +1,47 @@
+<div class="main-wrapper">
+  <nav class="nav-top">
+    <div class="navbar navbar-static-top" id="topnavbar"> 
+      <!-- navbar-fixed-top -->
+      <div class="navbar-inner" id="navbartop">
+        <div class="container"> <a class="brand" href="#"> 
+            OCTOFLY</a>
+          <div class="span8 pull-right top-social text-right">
+            <div style="float: right;margin: -26px 10px 0;">
+              <%= link_to "Home", root_path, :class=>"btn-green section-nav-goto", :style => "color: #ffffff;" %>
+            </div>
+            <div class="so-icon" style="float: right;margin-top: -16px;">
+              <a href="#" class="fa-icon-phone"></a>
+              <a href="#" class="icon-skype"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br/>
+
+  <div class="container">
+    <table class="table table-bordered">
+
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Stripe Card Token</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.stripe_card_token %></td>
+          <td><%= user.status %></td>
+          <td><%= user.status == "Paid" ? (link_to "Refund",refund_amount_admin_path(user),:class => "btn btn-success") : "" %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

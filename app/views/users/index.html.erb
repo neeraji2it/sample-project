@@ -1,0 +1,57 @@
+<div class="main-wrapper">
+  <!--START MAIN-WRAPPER--> 
+
+  <!-- TOP SECTION-->
+
+  <!-- ################-->
+  <!-- START TOP MENU -->
+  <!-- ################-->
+  <nav class="nav-top">
+    <div class="navbar navbar-static-top" id="topnavbar"> 
+        <!-- navbar-fixed-top -->
+        <div class="navbar-inner" id="navbartop">
+          <div class="container"> <a class="brand" href="/"> 
+              OCTOFLY</a>
+            <div class="span8 pull-right top-social text-right">
+              <div style="float: right;margin: -26px 10px 0;">
+                <%= link_to "Home", root_path, :class=>"btn-green section-nav-goto", :style => "color: #ffffff;" %>
+              </div>
+              <div class="so-icon" style="float: right;margin-top: -16px;">
+                <a href="#" class="fa-icon-phone"></a>
+                <a href="#" class="icon-skype"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- ################-->
+    <!-- END TOP MENU -->
+    <!-- ################-->		
+  </nav>
+  <!-- END HEADER headertop NAV -->
+
+  <!--TOP SECTION-->
+  <br/>
+
+  <div class="container">
+    <table class="table table-bordered">
+  <tr>
+    <th colspan="4"><%= link_to "Add New", new_user_path %></th>
+  </tr>
+  
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+  </tr>
+  
+  <% @user.each do |user| %>
+  <tr>
+    <td><%= user.first_name %></td>
+    <td><%= user.last_name %></td>
+    <td><%= user.email %></td>
+  </tr>
+  <% end %>
+</table>
+  </div>
+</div>
