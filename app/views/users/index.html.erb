@@ -8,20 +8,34 @@
   <!-- ################-->
   <nav class="nav-top">
     <div class="navbar navbar-static-top" id="topnavbar"> 
-        <!-- navbar-fixed-top -->
-        <div class="navbar-inner" id="navbartop">
-          <div class="container"> <a class="brand" href="/"> 
-              <img src="/assets/main-logo-darker.png" alt="" style="max-width: 165px;" /></a>
-            <div class="span8 pull-right top-social text-right">
-              <div style="float: right;margin: -26px 10px 0;">
-                <%#= link_to "Home", root_path, :class=>"btn-green section-nav-goto", :style => "color: #ffffff;" %>
-              </div>
-              <div class="so-icon" style="float: right;margin-top: -16px;">
+      <!-- navbar-fixed-top -->
+      <div class="navbar-inner" id="navbartop">
+        <div class="container"> <a class="brand" href="/"> 
+            <img src="/assets/main-logo-darker.png" alt="" style="max-width: 165px;" /></a>
+          <div class="span8 pull-right top-social text-right">
+            <div style="float: right;margin: -26px 10px 0;">
+<%#= link_to "Home", root_path, :class=>"btn-green section-nav-goto", :style => "color: #ffffff;" %>
+            </div>
+            <div class="so-icon" style="float: right;margin-top: -16px;">
+              <script type="text/javascript">
+                (function() {
+                  var ss = document.createElement('script');
+                  ss.type = 'text/javascript';
+                  ss.async = true;
+                  ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'seal.ssls.com/script.js?cn=' + window.location.host;
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(ss, s);
+                })();
+              </script>
+              <!-- Do not alter for the seal to work properly -->
+              <div id="sslsSiteSeal">
+                seal by <a href="http://ssls.com/">SSLs.com</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     <!-- ################-->
     <!-- END TOP MENU -->
     <!-- ################-->		
@@ -32,24 +46,30 @@
   <br/>
 
   <div class="container">
+    <p style="color: green; font-size: 16px; margin-top: 80px;">
+      <b>Thank you for your payment !!</b>
+    </p>
+    
+    <!--
     <table class="table table-bordered">
-  <tr>
-    <th colspan="4"><%= link_to "Add New", new_user_path %></th>
-  </tr>
-  
-  <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Email</th>
-  </tr>
-  
-  <% @user.each do |user| %>
-  <tr>
-    <td><%= user.first_name %></td>
-    <td><%= user.last_name %></td>
-    <td><%= user.email %></td>
-  </tr>
-  <% end %>
-</table>
+      <tr>
+        <th colspan="4"><%#= link_to "Add New", new_user_path %></th>
+      </tr>
+
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+      </tr>
+
+      <%# @user.each do |user| %>
+        <tr>
+          <td><%#= user.first_name %></td>
+          <td><%#= user.last_name %></td>
+          <td><%#= user.email %></td>
+        </tr>
+      <%# end %>
+    </table>
+    -->
   </div>
 </div>
