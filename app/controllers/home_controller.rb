@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
     def index
+        p ENV["STRIPE_PUBLIC_KEY"]
+        p ENV["STRIPE_API_KEY"]
+        p "****************"
     end
   
     def contact_us
