@@ -108,7 +108,12 @@
     <span>Zipcode * :</span>
     <%= f.text_field :shipping_zip %>
   </label>
-  <h4 style="background-color: blue;">Payment Methods</h4>
+  <h4 style="background-color: blue;">Secured Payments powered by Stripe</h4>
+  <div class="row">
+    <div class="span12">
+      <img src="/assets/payment-stripe.png" />
+    </div>
+  </div>
   <label>
     <span>Credit Card Number * :</span>
     <%= text_field_tag :card_number,nil,:maxlength => "16",:onkeydown => "isNumber(this);" %>

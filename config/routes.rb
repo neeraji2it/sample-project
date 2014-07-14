@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-    root :to => "home#index"
+    root :to => "users#new"
     match 'contact_us' => "home#contact_us", :via => [:get, :post]
     resources :users
     resources :admins do
