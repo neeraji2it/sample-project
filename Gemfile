@@ -41,3 +41,6 @@ gem 'simple_captcha2', require: 'simple_captcha'
 gem 'capistrano'
 gem 'rvm-capistrano'
 gem 'capistrano-ext'
+
+# better rails console
+gem 'pry-rails'

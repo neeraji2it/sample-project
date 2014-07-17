@@ -27,9 +27,9 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Email</th>
-        <th>Stripe Card Token</th>
+        <th>Amount</th>
         <th>Status</th>
-        <th>Action</th>
+        <!-- <th>Action</th> -->
       </tr>
 
       <% @users.each do |user| %>
@@ -37,9 +37,9 @@
           <td><%= user.first_name %></td>
           <td><%= user.last_name %></td>
           <td><%= user.email %></td>
-          <td><%= user.stripe_card_token %></td>
+          <td><%= user.price %></td>
           <td><%= user.status %></td>
-          <td><%= user.status == "Paid" ? (link_to "Refund",refund_amount_admin_path(user),:class => "btn btn-success") : "" %></td>
+          <!-- <td><%#= user.status == "Paid" ? (link_to "Refund",refund_amount_admin_path(user),:class => "btn btn-success") : "" %></td> -->
         </tr>
       <% end %>
     </table>
