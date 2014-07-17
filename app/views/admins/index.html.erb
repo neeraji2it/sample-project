@@ -24,6 +24,7 @@
     <table class="table table-bordered">
 
       <tr>
+        <th>Created At</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Email</th>
@@ -34,6 +35,7 @@
 
       <% @users.each do |user| %>
         <tr>
+          <td><%= user.created_at %></td>
           <td><%= user.first_name %></td>
           <td><%= user.last_name %></td>
           <td><%= user.email %></td>

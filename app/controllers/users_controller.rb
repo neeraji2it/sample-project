@@ -25,7 +25,8 @@ class UsersController < ApplicationController
                 :currency    => 'usd'
             )
 
-            @user.update(:stripe_charge_id => stripe_charge[:id],:status => "Paid")
+            @user.update(:stripe_charge_id => stripe_charge[:id], :status => "Paid")
+            
             redirect_to users_path
             flash[:notice] = "User was successfully created"
         else

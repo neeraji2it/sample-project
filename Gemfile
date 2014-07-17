@@ -43,4 +43,4 @@ gem 'rvm-capistrano'
 gem 'capistrano-ext'
 
 # better rails console
-gem 'pry-rails'
+gem 'pry-rails', :group => :development
